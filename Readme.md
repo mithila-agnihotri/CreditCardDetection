@@ -9,4 +9,4 @@ Since we have an unbalanced dataset and for fraud detection we care more about g
 
 I further optimized the SVM model with RBF kernel using GridSearchCV on the gamma parameter and auc_roc as the scoring parameter and found that the default parameter itself gave the best test score – 0.96 
 
-I also used undersampling method to get a better classifier since our dataset is highly unbalanced (less than 0.2% of the transactions are fraudulent!). As expected my test set recall score greatly improved using undersampling (from 0.59 to 0.79) and my AUC score jumped to 0.98. This is before hyper parameter tuning with undersampled minority class. 
+I also used undersampling method to get a better classifier since our dataset is highly unbalanced (less than 0.2% of the transactions are fraudulent!). As expected my test set recall score greatly improved using undersampling (from 0.59 to 0.79 for the default decision threshold) and my AUC score jumped to 0.98. This score did not change after hyper parameter tuning with undersampled majority class. 
